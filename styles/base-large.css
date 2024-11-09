@@ -1,0 +1,27 @@
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+    header { /* Targeting the header directly */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav {
+        display: flex; /* Ensure it uses flex */
+        justify-content: flex-end;
+        flex-direction: row; /* Row direction for desktop */
+    }
+
+    .nav ul li { /* Target list items instead of links */
+        flex: 1 1 100%; /* Space between items */
+    }
+
+	.nav ul {
+		display: flex;
+	}
+
+    .nav a {
+        padding: 10px 15px; /* Ensure consistent padding */
+        flex: none; /* Remove the flex-grow/shrink */
+    }
+}
