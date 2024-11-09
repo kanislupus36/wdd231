@@ -15,6 +15,7 @@
     </head>
     <body>
         <header>
+            <h1>Home Page</h1>
             <nav class="steps">
                  <ul>
                     <li class="step active"><a href="index.html">Home</a></li>
@@ -25,17 +26,17 @@
             </nav>
         </header>
         <main>
-            <div class="filter-buttons">
+            <section class="filter-buttons">
                 <button onclick="filterCourses('all')">All Courses</button>
                 <button onclick="filterCourses('WDD')">WDD Courses</button>
                 <button onclick="filterCourses('CSE')">CSE Courses</button>
-            </div>
+            </section>
         
-            <div id="courses-container" class="courses-container"></div>
+            <section id="courses-container" class="courses-container"></section>
         
-            <div id="total-credits" class="total-credits">
+            <section id="total-credits" class="total-credits">
                 <h3>Total Credits: <span id="credits-display">0</span></h3>
-            </div>
+            </section>
         </main>
         <footer>
             <p>©<span id="currentyear"></span> Kadin Adams, UT</p>
