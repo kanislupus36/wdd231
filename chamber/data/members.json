@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Tech Solutions Inc.",
+      "address": "1234 Innovation Dr, Tech City, TC 54321",
+      "phone": "+1-800-555-1234",
+      "website": "https://www.techsolutions.com",
+      "image": "tech.webp",
+      "membership_level": 3,
+      "other_info": "Leading provider of cutting-edge tech solutions."
+    },
+    {
+      "name": "Green Energy Co.",
+      "address": "5678 Green St, EcoTown, ET 23456",
+      "phone": "+1-800-555-5678",
+      "website": "https://www.greenenergy.com",
+      "image": "green.webp",
+      "membership_level": 2,
+      "other_info": "Pioneering sustainable energy solutions."
+    },
+    {
+      "name": "Innovative Designs LLC",
+      "address": "9101 Design Ave, Creatopolis, CP 67890",
+      "phone": "+1-800-555-9101",
+      "website": "https://www.innovativedesigns.com",
+      "image": "design.webp",
+      "membership_level": 1,
+      "other_info": "Creative solutions for modern design challenges."
+    },
+    {
+      "name": "Global Logistics Ltd.",
+      "address": "1122 Shipping Rd, Cargo City, CC 13579",
+      "phone": "+1-800-555-1122",
+      "website": "https://www.globallogistics.com",
+      "image": "logistic.webp",
+      "membership_level": 3,
+      "other_info": "Worldwide logistics and transportation services."
+    },
+    {
+      "name": "Cyber Security Partners",
+      "address": "3141 Protection Blvd, SecureCity, SC 24680",
+      "phone": "+1-800-555-3141",
+      "website": "https://www.cybersecuritypartners.com",
+      "image": "cyber.webp",
+      "membership_level": 2,
+      "other_info": "Specialized in protecting businesses from cyber threats."
+    },
+    {
+      "name": "AI Innovations Corp.",
+      "address": "6789 AI Pkwy, Future City, FC 98765",
+      "phone": "+1-800-555-6789",
+      "website": "https://www.aiinnovations.com",
+      "image": "ai.webp",
+      "membership_level": 1,
+      "other_info": "Cutting-edge artificial intelligence products and services."
+    },
+    {
+      "name": "CloudTech Solutions",
+      "address": "123 Cloud Lane, DigitalTown, DT 54321",
+      "phone": "+1-800-555-4321",
+      "website": "https://www.cloudtechsolutions.com",
+      "image": "cloud.webp",
+      "membership_level": 3,
+      "other_info": "Revolutionizing cloud-based services."
+    }
+  ]
+  

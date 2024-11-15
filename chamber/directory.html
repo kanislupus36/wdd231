@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <title>Chamber of Commerce Home Page</title>
+        <meta name="description" content="Chamber of Commerce Home Page">
+        <meta name="author" content="Kadin Adams">
+        <meta name="title" content="Chamber of Commerce Home Page">
+        <meta name="type" content="website">
+        <meta name="image" content="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/34/00/f0/salt-lake-city.jpg?w=1100&h=600&s=1">
+        <meta name="url" content="https://kanislupus36.github.io/wdd231/">
+        <link rel="stylesheet" href="styles/chamber.css">
+        <link rel="stylesheet" href="styles/chamber-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="scripts/chamber.js" defer></script>
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+        <header>
+            <h1>Directory</h1>
+            <nav class="steps">
+                 <ul>
+                    <li class="step"><a href="index.html">Home</a></li>
+                    <li class="step active"><a href="directory.html">Directory</a></li>
+                    <li class="step"><a href="join.html">Join</a></li>
+                    <li class="step"><a href="contact.html">Contact</a></li>
+                 </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="view-toggle">
+                  <button id="gridViewButton">Grid View</button>
+                  <button id="listViewButton">List View</button>
+                </div>
+                <div id="memberContainer" class="list-view"></div>
+              </div>
+        </main>
+        <footer>
+            <p>©<span id="currentyear"></span> Kadin Adams, WDD 231</p>
+            <p>lastmodified</p>
+        </footer>
+    </body>
+    </html>
