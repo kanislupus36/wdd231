@@ -25,3 +25,10 @@
         flex: none; /* Remove the flex-grow/shrink */
     }
 }
+
+/* Media Query for mobile screens */
+@media (max-width: 767px) {
+    .spotlights {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for smaller screens */
+    }
+}

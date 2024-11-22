@@ -9,7 +9,7 @@ h1 {
     color: lightblue;
 }
 h2 {
-    color: #a81d30;
+    color: lightblue;
 }
 p {
     line-height: 1.6;
@@ -217,3 +217,174 @@ button:hover {
   .view-toggle button:hover {
     background-color: #444;
   }
+
+  /* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cta-button {
+  background-color: #007bff;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Weather Section */
+.weather {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.weather h2 {
+  margin-bottom: 10px;
+}
+
+.weather ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.weather li {
+  margin: 5px 0;
+}
+
+/* Spotlight Section */
+.spotlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Auto grid columns that scale */
+  gap: 20px; /* Spacing between grid items */
+  justify-items: center; /* Center the cards inside the grid cells */
+  margin-top: 20px; /* Optional: gives space above the grid */
+}
+
+.spotlight-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 100%; /* Ensures cards take full width of the grid cell */
+  max-width: 350px; /* Optional: limits the width for bigger screens */
+}
+
+.spotlight-card:hover {
+  transform: translateY(-10px); /* Hover effect */
+}
+
+.spotlight-card img {
+  width: 120px; /* Logo size */
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.spotlight-card h3 {
+  margin-top: 15px;
+  font-size: 24px; /* Increase font size for the company name */
+  color: #333;
+  font-weight: bold;
+}
+
+.spotlight-card p {
+  font-size: 18px; /* Adjusted text size */
+}
+
+.spotlight-card a {
+  font-size: 18px; /* Adjusted link size */
+  color: #007bff;
+  text-decoration: none;
+}
+
+.spotlight-card a:hover {
+  text-decoration: underline;
+}
+
+/* General grid setup for sections */
+section {
+  margin-bottom: 30px;
+}
+
+/* Grid layout for current events */
+.current-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.current-event-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.current-event-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.current-event-card p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+/* Grid layout for weather */
+.weather {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.weather-details {
+  text-align: center;
+}
+
+.weather-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.weather-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.weather-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.weather-card p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
