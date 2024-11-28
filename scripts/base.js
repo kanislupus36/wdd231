@@ -17,6 +17,7 @@ function setLastModifiedDate() {
 document.addEventListener('DOMContentLoaded', () => {
     setCopyrightYear();
     setLastModifiedDate();
+    renderCourses(courses);
 });
 
 const courses = [
@@ -120,6 +121,7 @@ function renderCourses(filteredCourses) {
             <p><strong>Certificate:</strong> ${course.certificate}</p>
         `;
 
+        addCourseClickListener(courseCard, course);
         coursesContainer.appendChild(courseCard);
     });
 
@@ -145,3 +147,37 @@ function updateTotalCredits(filteredCourses) {
 
 // Initial render of all courses
 renderCourses(courses);
+
+const courseDetails = document.getElementById('course-details');
+const courseDetailContent = document.getElementById('course-detail-content');
+
+function displayCourseDetails(course) {
+    courseDetailContent.innerHTML = '';
+    courseDetailContent.innerHTML = `
+    <button id="closeModal"></button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Techologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+
+    courseDetails.showModal();
+    const closeModalButton = document.getElementById('closeModal');
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
+
+courseDetails.addEventListener('click', (event) => {
+    if (event.target === courseDetails) {
+        courseDetails.close();
+    }
+});
+
+function addCourseClickListener(courseCard, course) {
+    courseCard.addEventListener('click', () => {
+        displayCourseDetails(course);
+    });
+}

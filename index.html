@@ -37,7 +37,12 @@
                 <button onclick="filterCourses('CSE')">CSE Courses</button>
             </section>
         
-            <section id="courses-container" class="courses-container"></section>
+            <section id="courses-container" class="courses-container">
+                <dialog id="course-details">
+                    <button id="closeModal">Close</button>
+                    <div id="course-detail-content"></div>
+                </dialog>
+            </section>
         
             <section id="total-credits" class="total-credits">
                 <h3>Total Credits: <span id="credits-display">0</span></h3>
