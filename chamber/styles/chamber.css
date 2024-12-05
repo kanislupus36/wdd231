@@ -517,3 +517,52 @@ section {
 .membership-card:nth-child(4) {
   animation-delay: 0.9s; /* Fourth card appears 0.9s after the first */
 }
+
+/* General Layout for discover.html */
+.discover-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar: 1/4th width, Main: 3/4th width */
+  gap: 20px;
+}
+
+/* Sidebar Layout */
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.weather, .events {
+  margin-top: 20px;
+}
+
+/* Main Content Layout */
+.main-content {
+  padding: 20px;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid for responsive image layout */
+  gap: 15px;
+}
+
+img.lazyload {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 0; /* Initially hidden for lazy loading */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+/* For mobile view, switch to a single column layout */
+@media (max-width: 768px) {
+  .discover-container {
+      grid-template-columns: 1fr; /* Full width for both sidebar and main content */
+  }
+}

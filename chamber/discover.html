@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <title>Salt Lake City Chamber of Commerce Discover</title>
+        <meta name="description" content="Salt Lake City Chamber of Commerce Discover page">
+        <meta name="author" content="Kadin Adams">
+        <meta property="og:title" content="Chamber of Commerce Discover"/>
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://kanislupus36.github.io/wdd231/chamber/discover.html"/>
+        <meta property="og:url" content="https://kanislupus36.github.io/wdd231/chamber/discover.html"/>
+        <link rel="stylesheet" href="styles/chamber.css">
+        <link rel="stylesheet" href="styles/chamber-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="scripts/index.js" defer></script>
+        <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Discover Salt Lake City</h1>
+        <nav class="steps">
+                 <ul>
+                    <li class="step"><a href="index.html">Home</a></li>
+                    <li class="step"><a href="directory.html">Directory</a></li>
+                    <li class="step"><a href="join.html">Join</a></li>
+                    <li class="step active"><a href="discover.html">Discover</a></li>
+                 </ul>
+            </nav>
+    </header>
+
+    <main>
+        <div class="discover-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div id="visitor-message"></div>
+                <h2>Local Insights</h2>
+                <p>Discover the latest events, weather, and stats!</p>
+                <div class="weather">
+                    <h3>Weather Forecast</h3>
+                    <ul>
+                        <li>Temperature: 72°F</li>
+                        <li>Humidity: 56%</li>
+                    </ul>
+                </div>
+                <div class="events">
+                    <h3>Upcoming Events</h3>
+                    <ul>
+                        <li>Community Market - Dec 10</li>
+                        <li>Art Exhibition - Dec 12</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content (Images Gallery) -->
+            <div class="main-content">
+                <h2>Local Photos</h2>
+                <div class="photo-gallery">
+                    <img class="lazyload" data-src="image1.jpg" alt="Local Landmark 1" />
+                    <img class="lazyload" data-src="image2.jpg" alt="Local Landmark 2" />
+                    <img class="lazyload" data-src="image3.jpg" alt="Local Landmark 3" />
+                    <img class="lazyload" data-src="image4.jpg" alt="Local Landmark 4" />
+                    <img class="lazyload" data-src="image5.jpg" alt="Local Landmark 5" />
+                    <img class="lazyload" data-src="image6.jpg" alt="Local Landmark 6" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> Kadin Adams, WDD 231</p>
+        <p>lastmodified</p>
+    </footer>
+</body>
+</html>
