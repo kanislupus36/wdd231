@@ -1,0 +1,53 @@
+        /* Apply the selected color schema and typography */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #FFFFFF; /* White background */
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            color: #006F98; /* Blue for headings */
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            color: #006F98; /* Blue for sub-headings */
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            font-family: 'Oswald', sans-serif;
+            color: #006F98;
+        }
+
+        .content {
+            margin: 20px 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        .example {
+            color: #006400;
+            font-style: italic;
+        }
+
+        .note {
+            color: #FF4500;
+            font-weight: bold;
+        }
+
+        /* General styling for the page */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        /* Make sure headings and important text are prominent */
+        strong {
+            font-weight: bold;
+        }
