@@ -294,3 +294,47 @@ function displayFormData() {
     // Store current visit time
     localStorage.setItem('lastVisit', now);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Lazy loading images using IntersectionObserver
+    const lazyImages = document.querySelectorAll('img.lazyload');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px 200px 0px', // Load images 200px before they come into view
+        threshold: 0.01
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.getAttribute('data-src'); // Set src from data-src attribute
+                img.onload = () => img.classList.remove('lazyload'); // Remove lazyload class when image is loaded
+                observer.unobserve(img);
+            }
+        });
+    }, observerOptions);
+
+    lazyImages.forEach(image => observer.observe(image));
+
+    // Display visitor message using localStorage
+    const visitorMessageDiv = document.getElementById('visitor-message');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const now = Date.now();
+
+    if (!lastVisit) {
+        // First visit
+        visitorMessageDiv.innerHTML = "Welcome! Let us know if you have any questions.";
+    } else {
+        const daysSinceVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+        if (daysSinceVisit < 1) {
+            visitorMessageDiv.innerHTML = "Back so soon! Awesome!";
+        } else {
+            visitorMessageDiv.innerHTML = `You last visited ${daysSinceVisit} day${daysSinceVisit > 1 ? 's' : ''} ago.`;
+        }
+    }
+
+    // Store current visit time in localStorage
+    localStorage.setItem('lastVisit', now);
+});
+

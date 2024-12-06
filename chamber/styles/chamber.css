@@ -560,9 +560,85 @@ img.lazyload {
   transition: opacity 0.3s ease; /* Smooth transition for visibility */
 }
 
+/* Flex container for layout */
+.discover-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Two-column layout (sidebar + main content) */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Main Content Styles */
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Visitor Message Styling */
+#visitor-message {
+  padding: 1rem;
+  background-color: #e7e7e7;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* Weather and Events Sections */
+.weather, .events {
+  margin-top: 1rem;
+}
+
+.weather ul, .events ul {
+  list-style: none;
+}
+
+.weather h3, .events h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather li, .events li {
+  margin: 0.5rem 0;
+}
+
 /* For mobile view, switch to a single column layout */
 @media (max-width: 768px) {
   .discover-container {
       grid-template-columns: 1fr; /* Full width for both sidebar and main content */
+  }
+}
+
+.main-content img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-content img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .main-content img:hover {
+      transform: none;
+      box-shadow: none;
   }
 }
