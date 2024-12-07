@@ -525,13 +525,6 @@ section {
   gap: 20px;
 }
 
-/* Sidebar Layout */
-.sidebar {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 8px;
-}
-
 .sidebar h2 {
   margin-top: 0;
 }
@@ -551,15 +544,6 @@ section {
   gap: 15px;
 }
 
-img.lazyload {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  opacity: 0; /* Initially hidden for lazy loading */
-  transition: opacity 0.3s ease; /* Smooth transition for visibility */
-}
-
 /* Flex container for layout */
 .discover-container {
   display: grid;
@@ -570,7 +554,7 @@ img.lazyload {
 
 /* Sidebar Styles */
 .sidebar {
-  background-color: #f4f4f4;
+  background-color: rgb(2, 125, 156);
   padding: 1rem;
   border-radius: 8px;
 }
@@ -603,7 +587,7 @@ img.lazyload {
 .photo-gallery figcaption {
     margin-top: 10px;
     font-size: 1rem;
-    color: #333;
+    color: white;
     font-weight: bold;
     text-align: center;
     padding: 5px;
