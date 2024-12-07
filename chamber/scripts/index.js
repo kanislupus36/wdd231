@@ -165,19 +165,19 @@ window.onload = async () => {
   // Example data for current events
 const currentEvents = [
     {
-        title: "Event 1",
-        description: "This is the description for event 1.",
-        date: "December 1, 2024"
-    },
-    {
-        title: "Event 2",
-        description: "This is the description for event 2.",
+        title: "Community Market",
+        description: "This is the famous farmer's market in the community!",
         date: "December 10, 2024"
     },
     {
-        title: "Event 3",
-        description: "This is the description for event 3.",
-        date: "December 15, 2024"
+        title: "Art Exhibition",
+        description: "This is an art exhibition coming to our city!",
+        date: "December 12, 2024"
+    },
+    {
+        title: "Carnival",
+        description: "A carnival is coming to town!",
+        date: "December 20, 2024"
     }
 ];
 
@@ -317,24 +317,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
     lazyImages.forEach(image => observer.observe(image));
 
-    // Display visitor message using localStorage
-    const visitorMessageDiv = document.getElementById('visitor-message');
-    const lastVisit = localStorage.getItem('lastVisit');
-    const now = Date.now();
+   // Get the current date in milliseconds (since the epoch)
+// Get the current date in milliseconds (since the epoch)
+const currentVisit = Date.now();
 
+// Get the last visit date from localStorage
+let lastVisit = localStorage.getItem('lastVisit');
+
+// Function to calculate the number of days between two dates
+function calculateDaysBetween(lastVisit) {
+    const diffInMilliseconds = currentVisit - lastVisit;
+    const diffInDays = Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24)); // Convert ms to days
+    return diffInDays;
+}
+
+// Function to display the appropriate message
+function displayVisitMessage() {
+    const visitorMessageElement = document.getElementById('visitor-message'); // Using the ID to target the element
+
+    // If this is the user's first visit (no 'lastVisit' in localStorage)
     if (!lastVisit) {
-        // First visit
-        visitorMessageDiv.innerHTML = "Welcome! Let us know if you have any questions.";
+        visitorMessageElement.innerHTML = "<p>Welcome! Let us know if you have any questions.</p>";
     } else {
-        const daysSinceVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+        const daysSinceVisit = calculateDaysBetween(lastVisit);
+
+        // If less than 1 day between visits, show a quick return message
         if (daysSinceVisit < 1) {
-            visitorMessageDiv.innerHTML = "Back so soon! Awesome!";
+            visitorMessageElement.innerHTML = "<p>Back so soon! Awesome!</p>";
         } else {
-            visitorMessageDiv.innerHTML = `You last visited ${daysSinceVisit} day${daysSinceVisit > 1 ? 's' : ''} ago.`;
+            // If more than 1 day between visits, show the number of days
+            const dayText = daysSinceVisit === 1 ? "day" : "days";
+            visitorMessageElement.innerHTML = `<p>You last visited ${daysSinceVisit} ${dayText} ago.</p>`;
         }
     }
 
-    // Store current visit time in localStorage
-    localStorage.setItem('lastVisit', now);
+    // Store the current visit date in localStorage
+    localStorage.setItem('lastVisit', currentVisit);
+}
+
+// Call the function on page load
+document.addEventListener('DOMContentLoaded', displayVisitMessage);
+
+
 });
 

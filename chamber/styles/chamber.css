@@ -587,11 +587,26 @@ img.lazyload {
   gap: 1rem;
 }
 
+.photo-item {
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+}
+
 .photo-gallery img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
+}
+
+.photo-gallery figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
 }
 
 /* Visitor Message Styling */
@@ -641,4 +656,18 @@ img.lazyload {
       transform: none;
       box-shadow: none;
   }
+}
+
+.visitor-message {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.visitor-message p {
+  margin: 0;
+  font-weight: bold;
 }
