@@ -1,0 +1,108 @@
+[
+    {
+      "name": "Lionel Messi",
+      "position": "Forward",
+      "club": "Inter Miami",
+      "image": "messi.jpg",
+      "age": 37
+    },
+    {
+      "name": "Emiliano Martinez",
+      "position": "Goalkeeper",
+      "club": "Aston Villa",
+      "age": 32,
+      "image": "emiliano.jpg"
+    },
+    {
+      "name": "Angel Di Maria",
+      "position": "Forward",
+      "club": "Juventus",
+      "age": 36,
+      "image": "angel.jpg"
+    },
+    {
+      "name": "Lautaro Martinez",
+      "position": "Forward",
+      "club": "Inter Milan",
+      "age": 27,
+      "image": "lautaro.png"
+    },
+    {
+      "name": "Rodrigo De Paul",
+      "position": "Midfielder",
+      "club": "Atletico Madrid",
+      "age": 30,
+      "image": "rodrigo.jpg"
+    },
+    {
+      "name": "Leandro Paredes",
+      "position": "Midfielder",
+      "club": "Juventus",
+      "age": 30,
+      "image": "leandro.jpg"
+    },
+    {
+      "name": "Julian Alvarez",
+      "position": "Forward",
+      "club": "Manchester City",
+      "age": 24,
+      "image": "julian.jpg"
+    },
+    {
+        "name": "Nicolas Otamendi",
+        "position": "Defender",
+        "club": "Benfica",
+        "age": 36,
+        "image": "nicolas.jpg"
+      },
+      {
+        "name": "Cristian Romero",
+        "position": "Defender",
+        "club": "Tottenham Hotspur",
+        "age": 26,
+        "image": "cristian.png"
+      },
+      {
+        "name": "Enzo Fernandez",
+        "position": "Midfielder",
+        "club": "Chelsea",
+        "age": 23,
+        "image": "enzo.jpg"
+      },
+      {
+        "name": "Nahuel Molina",
+        "position": "Defender",
+        "club": "Atletico Madrid",
+        "age": 26,
+        "image": "nahuel.jpg"
+      },
+      {
+        "name": "Nicolas Tagliafico",
+        "position": "Defender",
+        "club": "Lyon",
+        "age": 32,
+        "image": "tagliafico.png"
+      },
+      {
+        "name": "Gonzalo Montiel",
+        "position": "Defender",
+        "club": "Sevilla",
+        "age": 27,
+        "image": "gonzalo.jpg"
+      },
+      {
+        "name": "Giovani Lo Celso",
+        "position": "Midfielder",
+        "club": "Real Betis",
+        "age": 28,
+        "image": "giovani.jpg"
+      },
+      {
+        "name": "Facundo Medina",
+        "position": "Defender",
+        "club": "RC Lens",
+        "age": 25,
+        "image": "facundo.jpg"
+      }
+  ]
+  

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Argentina National Team Newsletter</title>
+        <meta name="description" content="Argentina National Team Newsletter">
+        <meta name="author" content="Kadin Adams">
+        <meta property="og:title" content="Argentina National Team Newsletter"/>
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://kanislupus36.github.io/wdd231/project/newsletter.html"/>
+        <meta property="og:url" content="https://kanislupus36.github.io/wdd231/project/newsletter.html"/>
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/base-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="scripts/base.js" defer></script>
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+        <header>
+            <h1>Newsletter</h1>
+            <nav class="steps">
+                 <ul>
+                    <li class="step"><a href="index.html">Home</a></li>
+                    <li class="step"><a href="roster.html">Roster</a></li>
+                    <li class="step"><a href="schedule.html">Schedule</a></li>
+                    <li class="step active"><a href="newsletter.html">Newsletter</a></li>
+                 </ul>
+            </nav>
+        </header>
+        <main>
+            <form method="GET" action="thankyou.html" onsubmit="addTimestamp()">
+                <!-- First Name -->
+                <label for="first-name" title="Enter your first name">
+                    First Name:
+                    <input type="text" id="first-name" name="first_name" required autocomplete="given-name">
+                </label>
+                <br>
+    
+                <!-- Last Name -->
+                <label for="last-name" title="Enter your last name">
+                    Last Name:
+                    <input type="text" id="last-name" name="last_name" required autocomplete="family-name">
+                </label>
+                <br>
+    
+                <!-- Email -->
+                <label for="email" title="Enter your email address">
+                    Email Address:
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@example.com">
+                </label>
+                <br>
+    
+                <!-- Mobile Number -->
+                <label for="phone" title="Enter your mobile number">
+                    Mobile Phone Number:
+                    <input type="tel" id="phone" name="mobile_phone" required autocomplete="tel">
+                </label>
+                <br>
+    
+                <!-- Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+                
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+            </form>
+    
+            
+        </main>
+        <footer>
+            <p>©<span id="currentyear"></span> Kadin Adams, WDD 231</p>
+            <p>lastmodified</p>
+        </footer>
+    </body>
+    </html>
