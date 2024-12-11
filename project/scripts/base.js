@@ -20,6 +20,9 @@ function setCopyrightYear() {
     await fetchWeather();
     const roster = await loadRoster();
     loadSpotlights(roster);
+    renderRoster(roster);
+    renderGames();
+    displayFormData();
 });
 
   
@@ -98,7 +101,6 @@ function displayForecast(data) {
 async function loadRoster() {
     const response = await fetch('data/roster.json');
     const roster = await response.json();
-    renderRoster(roster);
     return roster;
 }
 
@@ -152,7 +154,7 @@ function renderRoster(roster) {
     });
   }
 
-  document.getElementById('gridViewButton').addEventListener('click', () => {
+    document.getElementById('gridViewButton').addEventListener('click', () => {
     document.getElementById('memberContainer').classList.remove('list-view');
     document.getElementById('memberContainer').classList.add('grid-view');
   });
@@ -162,20 +164,47 @@ function renderRoster(roster) {
     document.getElementById('memberContainer').classList.add('list-view');
   });
 
+  // Schedule stuff
+  const upcomingGames = [
+    {
+        title: "Argentina vs Brazil",
+        venue: "Estadio Monumental, Buenos Aires",
+        date: "December 15, 2024",
+        time: "20:00 GMT",
+        description: "This historic South American rivalry will feature Argentina facing Brazil. A match with immense importance in the CONMEBOL qualifiers."
+    },
+    {
+        title: "Argentina vs Chile",
+        venue: "Estadio Nacional, Santiago",
+        date: "December 18, 2024",
+        time: "18:30 GMT",
+        description: "Argentina faces Chile in an intense qualifier, with both teams fighting for a top position in the standings."
+    }
+];
+
+function renderGames() {
+    const gamesContainer = document.querySelector('.upcoming-games');
+    upcomingGames.forEach(game => {
+        const gameCard = document.createElement('div');
+        gameCard.classList.add('upcoming-game-card');
+        
+        gameCard.innerHTML = `
+            <h3>${game.title}</h3>
+            <p><strong>Venue:</strong> ${game.venue}</p>
+            <p><strong>Date:</strong> ${game.date}</p>
+            <p><strong>Time:</strong> ${game.time}</p>
+            <p>${game.description}</p>
+        `;
+        
+        gamesContainer.appendChild(gameCard);
+    });
+}
 
   // Form stuff
 function addTimestamp() {
     var timestamp = new Date().toISOString();
     document.getElementById("timestamp").value = timestamp;
     console.log("Timestamp assigned:", timestamp);
-}
-
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
-}
-
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
 }
 
 function getQueryParams() {
@@ -207,7 +236,14 @@ function displayFormData() {
     }
 }
 
-window.onload = displayFormData();
+//Modal stuff
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
 
 
   // Lazy loading images

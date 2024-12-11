@@ -31,7 +31,164 @@
             </nav>
         </header>
         <main>
- 
+            <section class="hero">
+                <img src="images/hero-image.png" alt="Argentina National Team" class="hero-image" loading="lazy">
+                </section>
+            <div class="schedule-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Opponent</th>
+                            <th>Venue</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="openModal('modal1')">
+                            <td>2024-12-15</td>
+                            <td>Brazil</td>
+                            <td>Estadio Monumental, Buenos Aires</td>
+                            <td>20:00 (GMT)</td>
+                        </tr>
+                        <tr onclick="openModal('modal2')">
+                            <td>2024-12-18</td>
+                            <td>Chile</td>
+                            <td>Estadio Nacional, Santiago</td>
+                            <td>18:30 (GMT)</td>
+                        </tr>
+                        <tr onclick="openModal('modal3')">
+                            <td>2024-12-22</td>
+                            <td>Uruguay</td>
+                            <td>Estadio Centenario, Montevideo</td>
+                            <td>21:00 (GMT)</td>
+                        </tr>
+                        <tr onclick="openModal('modal4')">
+                            <td>2024-12-26</td>
+                            <td>Colombia</td>
+                            <td>Estadio Boca Juniors, Buenos Aires</td>
+                            <td>17:00 (GMT)</td>
+                        </tr>
+                        <tr onclick="openModal('modal5')">
+                            <td>2024-12-30</td>
+                            <td>Ecuador</td>
+                            <td>Estadio Monumental, Buenos Aires</td>
+                            <td>16:00 (GMT)</td>
+                        </tr>
+                        <tr onclick="openModal('modal6')">
+                            <td>2025-01-05</td>
+                            <td>Venezuela</td>
+                            <td>Estadio Olimpico, Caracas</td>
+                            <td>17:00 (GMT)</td>
+                        </tr>
+                        <tr onclick="openModal('modal7')">
+                            <td>2025-01-10</td>
+                            <td>Peru</td>
+                            <td>Estadio Nacional del Peru, Lima</td>
+                            <td>20:00 (GMT)</td>
+                        </tr>
+                        <tr onclick="openModal('modal8')">
+                            <td>2025-01-16</td>
+                            <td>Paraguay</td>
+                            <td>Estadio Boca Juniors, Buenos Aires</td>
+                            <td>19:30 (GMT)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <section class="weather">
+                <h2>Upcoming Forecast</h2>
+                <div class="weather-details">
+                </div>
+                <div class="weather-forecast">
+                </div>
+                </section>
+        
+            <!-- Modals -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h2>Argentina vs Brazil</h2>
+                    <p><strong>Date:</strong> 2024-12-15</p>
+                    <p><strong>Venue:</strong> Estadio Monumental, Buenos Aires</p>
+                    <p><strong>Time:</strong> 20:00 (GMT)</p>
+                    <p><strong>Details:</strong> This historic South American rivalry will feature Argentina facing Brazil. A match with immense importance in the CONMEBOL qualifiers.</p>
+                </div>
+            </div>
+        
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h2>Argentina vs Chile</h2>
+                    <p><strong>Date:</strong> 2024-12-18</p>
+                    <p><strong>Venue:</strong> Estadio Nacional, Santiago</p>
+                    <p><strong>Time:</strong> 18:30 (GMT)</p>
+                    <p><strong>Details:</strong> Argentina faces Chile in an intense qualifier, with both teams fighting for a top position in the standings.</p>
+                </div>
+            </div>
+        
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <h2>Argentina vs Uruguay</h2>
+                    <p><strong>Date:</strong> 2024-12-22</p>
+                    <p><strong>Venue:</strong> Estadio Centenario, Montevideo</p>
+                    <p><strong>Time:</strong> 21:00 (GMT)</p>
+                    <p><strong>Details:</strong> Argentina will travel to Montevideo to face Uruguay in a crucial match for qualification in the World Cup.</p>
+                </div>
+            </div>
+        
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <h2>Argentina vs Colombia</h2>
+                    <p><strong>Date:</strong> 2024-12-26</p>
+                    <p><strong>Venue:</strong> Estadio Boca Juniors, Buenos Aires</p>
+                    <p><strong>Time:</strong> 17:00 (GMT)</p>
+                    <p><strong>Details:</strong> A festive match against Colombia, with both teams looking to end the year with a solid performance.</p>
+                </div>
+            </div>
+            <div id="modal5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal5')">&times;</span>
+                    <h2>Argentina vs Ecuador</h2>
+                    <p><strong>Date:</strong> 2024-12-30</p>
+                    <p><strong>Venue:</strong> Estadio Monumental, Buenos Aires</p>
+                    <p><strong>Time:</strong> 16:00 (GMT)</p>
+                    <p><strong>Details:</strong> An intense match against Ecuador, with both teams looking to end the year with a solid performance.</p>
+                </div>
+            </div>
+            <div id="modal6" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal6')">&times;</span>
+                    <h2>Argentina vs Venezuela</h2>
+                    <p><strong>Date:</strong> 2025-01-05</p>
+                    <p><strong>Venue:</strong> Estadio Olimpico, Caracas</p>
+                    <p><strong>Time:</strong> 17:00 (GMT)</p>
+                    <p><strong>Details:</strong> Argentina will face Venezuela in this game looking to leap ahead in the standings.</p>
+                </div>
+            </div>
+            <div id="modal7" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal7')">&times;</span>
+                    <h2>Argentina vs Peru</h2>
+                    <p><strong>Date:</strong> 2025-01-10</p>
+                    <p><strong>Venue:</strong> Estadio Nacional del Peru, Lima</p>
+                    <p><strong>Time:</strong> 20:00 (GMT)</p>
+                    <p><strong>Details:</strong> In what is sure to be an intense game against rival Peru, don't miss out.</p>
+                </div>
+            </div>
+            <div id="modal8" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal8')">&times;</span>
+                    <h2>Argentina vs Paraguay</h2>
+                    <p><strong>Date:</strong> 2025-01-16</p>
+                    <p><strong>Venue:</strong> Estadio Boca Juniors, Buenos Aires</p>
+                    <p><strong>Time:</strong> 19:30 (GMT)</p>
+                    <p><strong>Details:</strong> Argentina will go against Paraguay in this closing match of the season.</p>
+                </div>
+            </div>
         </main>
         <footer>
             <p>©<span id="currentyear"></span> Kadin Adams, WDD 231</p>

@@ -172,6 +172,7 @@ button:hover {
     padding: 20px;
   }
 
+  /* Roster section */
   .roster-card {
     background-color: white;
     border-radius: 8px;
@@ -381,6 +382,60 @@ button:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Schedule section */
+.schedule-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #0066cc;
+  color: white;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/*Upcoming Games section*/
+.upcoming-game-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.upcoming-game-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.upcoming-game-card p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+.upcoming-games {
+  display: grid;
+  background-color: #333;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
 
 /* For mobile view, switch to a single column layout */
 @media (max-width: 768px) {
