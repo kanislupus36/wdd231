@@ -21,7 +21,9 @@ function setCopyrightYear() {
     const roster = await loadRoster();
     loadSpotlights(roster);
     renderRoster(roster);
-    renderGames();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     displayFormData();
 });
 
@@ -164,50 +166,14 @@ function renderRoster(roster) {
     document.getElementById('memberContainer').classList.add('list-view');
   });
 
-  // Schedule stuff
-  const upcomingGames = [
-    {
-        title: "Argentina vs Brazil",
-        venue: "Estadio Monumental, Buenos Aires",
-        date: "December 15, 2024",
-        time: "20:00 GMT",
-        description: "This historic South American rivalry will feature Argentina facing Brazil. A match with immense importance in the CONMEBOL qualifiers."
-    },
-    {
-        title: "Argentina vs Chile",
-        venue: "Estadio Nacional, Santiago",
-        date: "December 18, 2024",
-        time: "18:30 GMT",
-        description: "Argentina faces Chile in an intense qualifier, with both teams fighting for a top position in the standings."
-    }
-];
-
-function renderGames() {
-    const gamesContainer = document.querySelector('.upcoming-games');
-    upcomingGames.forEach(game => {
-        const gameCard = document.createElement('div');
-        gameCard.classList.add('upcoming-game-card');
-        
-        gameCard.innerHTML = `
-            <h3>${game.title}</h3>
-            <p><strong>Venue:</strong> ${game.venue}</p>
-            <p><strong>Date:</strong> ${game.date}</p>
-            <p><strong>Time:</strong> ${game.time}</p>
-            <p>${game.description}</p>
-        `;
-        
-        gamesContainer.appendChild(gameCard);
-    });
-}
-
   // Form stuff
-function addTimestamp() {
+
+  function addTimestamp() {
     var timestamp = new Date().toISOString();
     document.getElementById("timestamp").value = timestamp;
     console.log("Timestamp assigned:", timestamp);
 }
-
-function getQueryParams() {
+  function getQueryParams() {
     const params = new URLSearchParams(window.location.search);
     return {
         first_name: params.get("first_name"),
@@ -221,9 +187,9 @@ function getQueryParams() {
 function displayFormData() {
     const data = getQueryParams();
     const formDataList = document.getElementById("form-data");
-
+    
     for (let key in data) {
-        if (data[key]) { 
+        if (data[key]) {
             const listItem = document.createElement("li");
             if (key === "timestamp") {
                 const formattedDate = new Date(data[key]).toLocaleString();
@@ -271,53 +237,26 @@ function closeModal(modalId) {
 
  // local storage stuff
 
-  // Display visitor message using localStorage
-    const visitorMessageDiv = document.getElementById('visitor-message');
-    const lastVisit = localStorage.getItem('lastVisit');
-    const now = Date.now();
+//  document.addEventListener('DOMContentLoaded', function () {
+//     const visitorMessageDiv = document.getElementById('visitor-message');
+//     const lastVisit = localStorage.getItem('lastVisit');
+//     const now = Date.now();
 
-    if (!lastVisit) {
-        // First visit
-        visitorMessageDiv.innerHTML = "Welcome! Let us know if you have any questions.";
-    } else {
-        const daysSinceVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-        if (daysSinceVisit < 1) {
-            visitorMessageDiv.innerHTML = "Back so soon! Awesome!";
-        } else {
-            visitorMessageDiv.innerHTML = `You last visited ${daysSinceVisit} day${daysSinceVisit > 1 ? 's' : ''} ago.`;
-        }
-    }
+//     if (!lastVisit) {
+//         visitorMessageDiv.innerHTML = "Welcome! Let us know if you have any questions.";
+//     } else {
+//         const daysSinceVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+//         if (daysSinceVisit < 1) {
+//             visitorMessageDiv.innerHTML = "Back so soon! Awesome!";
+//         } else {
+//             visitorMessageDiv.innerHTML = `You last visited ${daysSinceVisit} day${daysSinceVisit > 1 ? 's' : ''} ago.`;
+//         }
+//     }
 
-    // Store current visit time
-    localStorage.setItem('lastVisit', now);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Lazy loading images using IntersectionObserver
-    const lazyImages = document.querySelectorAll('img.lazyload');
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px 200px 0px', // Load images 200px before they come into view
-        threshold: 0.01
-    };
-
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.getAttribute('data-src'); // Set src from data-src attribute
-                img.onload = () => img.classList.remove('lazyload'); // Remove lazyload class when image is loaded
-                observer.unobserve(img);
-            }
-        });
-    }, observerOptions);
-
-    lazyImages.forEach(image => observer.observe(image));
+//     localStorage.setItem('lastVisit', now);
+// });
 
 const currentVisit = Date.now();
-
-// Get the last visit date from localStorage
-let lastVisit = localStorage.getItem('lastVisit');
 
 // Function to calculate the number of days between two dates
 function calculateDaysBetween(lastVisit) {
@@ -332,7 +271,7 @@ function displayVisitMessage() {
 
     // If this is the user's first visit (no 'lastVisit' in localStorage)
     if (!lastVisit) {
-        visitorMessageElement.innerHTML = "<p>Welcome! Let us know if you have any questions.</p>";
+        visitorMessageElement.innerHTML = "<p>Welcome!</p>";
     } else {
         const daysSinceVisit = calculateDaysBetween(lastVisit);
 
@@ -350,10 +289,8 @@ function displayVisitMessage() {
     localStorage.setItem('lastVisit', currentVisit);
 }
 
-// Call the function on page load
-document.addEventListener('DOMContentLoaded', displayVisitMessage);
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    displayVisitMessage();
 });
 
-
+  });

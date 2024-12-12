@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" href="">
+        <script src="test.js" defer></script>
+    </head>
+    <body>
+        <header></header>
+<main>
+    <form method="GET" action="thankyou.html" onsubmit="addTimestamp()">
+        <!-- First Name -->
+        <label for="first-name" title="Enter your first name">
+            First Name:
+            <input type="text" id="first-name" name="first_name" required autocomplete="given-name">
+        </label>
+        <br>
+
+        <!-- Last Name -->
+        <label for="last-name" title="Enter your last name">
+            Last Name:
+            <input type="text" id="last-name" name="last_name" required autocomplete="family-name">
+        </label>
+        <br>
+
+        <!-- Organizational Title -->
+        <label for="org-title" title="Enter your organizational title">
+            Organizational Title:
+            <input type="text" id="org-title" name="organization_title" required autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
+        </label>
+        <br>
+
+        <!-- Email -->
+        <label for="email" title="Enter your email address">
+            Email Address:
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@example.com">
+        </label>
+        <br>
+
+        <!-- Mobile Number -->
+        <label for="phone" title="Enter your mobile number">
+            Mobile Phone Number:
+            <input type="tel" id="phone" name="mobile_phone" required autocomplete="tel">
+        </label>
+        <br>
+
+        <!-- Business Name -->
+        <label for="business-name" title="Enter your business/organization's name">
+            Business Name:
+            <input type="text" id="business-name" name="business_name" required autocomplete="organization">
+        </label>
+        <br>
+
+        <!-- Membership Level -->
+        <label for="membership-level" title="Select your membership level">
+            Membership Level:
+            <select id="membership-level" name="membership_level">
+                <option value="np">NP Membership (No Fee)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
+        </label>
+        <br>
+
+        <!-- Business Description -->
+        <label for="description" title="Describe your business/organization">
+            Business Description:
+            <textarea id="description" name="description" title="Please describe your business or organization"></textarea>
+        </label>
+        <br>
+
+        <!-- Timestamp -->
+        <input type="hidden" id="timestamp" name="timestamp" value="">
+        
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Membership Level Cards -->
+    <div class="membership-cards">
+        <div class="card membership-card" id="np-card">
+            <h3>NP Membership</h3>
+            <p>No fee. Basic access.</p>
+            <button onclick="openModal('np-modal')">More Info</button>
+        </div>
+        <div class="card membership-card" id="bronze-card">
+            <h3>Bronze Membership</h3>
+            <p>Basic access with some discounts.</p>
+            <button onclick="openModal('bronze-modal')">More Info</button>
+        </div>
+        <div class="card membership-card" id="silver-card">
+            <h3>Silver Membership</h3>
+            <p>Increased benefits, event access.</p>
+            <button onclick="openModal('silver-modal')">More Info</button>
+        </div>
+        <div class="card membership-card" id="gold-card">
+            <h3>Gold Membership</h3>
+            <p>All benefits, premium events.</p>
+            <button onclick="openModal('gold-modal')">More Info</button>
+        </div>
+    </div>
+
+    <!-- Modals for Membership Levels -->
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('np-modal')">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <p>As a non-profit organization, you gain access to our community with no membership fee. Enjoy our support through shared resources, community events, and networking opportunities. NP Members can also apply for specific grants and funding programs.
+            </p>
+        </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bronze-modal')">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <p>Bronze Members receive all NP Member benefits plus access to exclusive webinars, networking events, and priority registration for certain events. This membership level is perfect for smaller organizations seeking to expand their reach.
+            </p>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('silver-modal')">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <p>Silver Members enjoy all the benefits of Bronze Membership, with additional perks including discounted rates for advertising, premium event access, and early access to workshops and training sessions. This membership is ideal for organizations looking for more visibility and growth opportunities.
+            </p>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gold-modal')">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <p>Gold Members receive top-tier benefits, including all Silver Membership advantages, plus featured advertising on our homepage, VIP access to exclusive events, one-on-one consultations with experts, and free registration for special events and training programs. This is the ultimate membership level for organizations looking to maximize their influence.
+            </p>
+        </div>
+    </div>
+</main>
+<footer></footer>
+</body>
+</html>

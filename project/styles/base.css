@@ -409,6 +409,30 @@ tr:hover {
   background-color: #f1f1f1;
 }
 
+/* aside section */
+.discover-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.sidebar {
+  background-color: rgb(2, 125, 156);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.visitor-message {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: lightblue;
+}
+
+
 /*Upcoming Games section*/
 .upcoming-game-card {
   background-color: white;
@@ -428,7 +452,7 @@ tr:hover {
   margin: 5px 0;
 }
 
-.upcoming-games {
+.upcoming-games-container {
   display: grid;
   background-color: #333;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

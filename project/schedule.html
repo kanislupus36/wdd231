@@ -16,7 +16,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <script src="scripts/base.js" defer></script>
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="images/favicon.ico">
     </head>
     <body>
         <header>
@@ -34,6 +34,18 @@
             <section class="hero">
                 <img src="images/hero-image.png" alt="Argentina National Team" class="hero-image" loading="lazy">
                 </section>
+                <div class="discover-container">
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <h2>Welcome!</h2>
+                        <div id="visitor-message"></div>
+                        <div class="weather">
+                        </div>
+                            <div class="weather-details">
+                        </div>
+                        <div class="weather-forecast"></div>
+                    </aside>
+                    
             <div class="schedule-container">
                 <table>
                     <thead>
@@ -96,14 +108,6 @@
                     </tbody>
                 </table>
             </div>
-
-            <section class="weather">
-                <h2>Upcoming Forecast</h2>
-                <div class="weather-details">
-                </div>
-                <div class="weather-forecast">
-                </div>
-                </section>
         
             <!-- Modals -->
             <div id="modal1" class="modal">
@@ -193,6 +197,7 @@
         <footer>
             <p>©<span id="currentyear"></span> Kadin Adams, WDD 231</p>
             <p>lastmodified</p>
+            <p><a href="attributions.html">Attributions</a></p>
         </footer>
     </body>
     </html>

@@ -16,7 +16,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <script src="scripts/base.js" defer></script>
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="images/favicon.ico">
     </head>
     <body>
         <header>
@@ -42,9 +42,31 @@
         <h1>Home</h1>
 
         <!-- Upcoming Games Section -->
-        <section class="upcoming-games">
-            <h2>Upcoming Games</h2>
-        </section>
+        <div class="upcoming-games-container">
+            <div class="upcoming-game-card">
+                <h3>Argentina vs Brazil</h3>
+                <p><strong>Venue:</strong> Estadio Monumental, Buenos Aires</p>
+                <p><strong>Date:</strong> December 15, 2024</p>
+                <p><strong>Time:</strong> 20:00 GMT</p>
+                <p>This historic South American rivalry will feature Argentina facing Brazil. A match with immense importance in the CONMEBOL qualifiers.</p>
+            </div>
+    
+            <div class="upcoming-game-card">
+                <h3>Argentina vs Chile</h3>
+                <p><strong>Venue:</strong> Estadio Nacional, Santiago</p>
+                <p><strong>Date:</strong> December 18, 2024</p>
+                <p><strong>Time:</strong> 18:30 GMT</p>
+                <p>Argentina faces Chile in an intense qualifier, with both teams fighting for a top position in the standings.</p>
+            </div>
+
+            <div class="upcoming-game-card">
+                <h3>Argentina vs Uruguay</h3>
+                <p><strong>Venue:</strong> Estadio Centenario, Montevideo</p>
+                <p><strong>Date:</strong> December 22, 2024</p>
+                <p><strong>Time:</strong> 21:00 GMT</p>
+                <p>Argentina will travel to Montevideo to face Uruguay in a crucial match for qualification in the World Cup.</p>
+            </div>    
+        </div>
 
         <!-- Weather Section -->
         <section class="weather">
@@ -63,6 +85,7 @@
         <footer>
             <p>©<span id="currentyear"></span> Kadin Adams, WDD 231</p>
             <p>lastmodified</p>
+            <p><a href="attributions.html">Attributions</a></p>
         </footer>
     </body>
     </html>
